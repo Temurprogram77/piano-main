@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("Black_Wood_Background.png") no-repeat center
+    center/cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 0 0 10px 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #ccc;
+}
+
+.black {
+  color: white;
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 0 0 10px 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
